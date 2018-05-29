@@ -44,27 +44,27 @@ int n_queens(int **chess_board, int chess_board_size, int queens_count) {
 }
 
 int main(){
-	int n, **chess_board;
-	scanf("%d", &n);
-	
+    int n, **chess_board;
+    scanf("%d", &n);
+    
     chess_board = (int **) calloc(n, sizeof(int **));
     for (int i=0; i<n; i++) {
         chess_board[i] = (int *) calloc(n, sizeof(int *));
     }
-	if (chess_board == NULL) {
-	    printf("calloc failed\n");
-	    return 1;
-	}
-	
-	if (n_queens(chess_board, n, n)) {
-	    printf("YES\n");
-	    for (int i=0; i<n; i++) {
-	        for (int j=0; j<n; j++) {
-	            printf("%d ", chess_board[i][j]);
-	        }
-	        printf("\n");
-	    }
-	} else {
-	    printf("NO\n");
-	}
+    if (chess_board == NULL) {
+        printf("calloc failed\n");
+        return 1;
+    }
+    
+    if (n_queens(chess_board, n, n)) {
+        printf("YES\n");
+        for (int i=0; i<n; i++) {
+            for (int j=0; j<n; j++) {
+                printf("%d ", chess_board[i][j]);
+            }
+            printf("\n");
+        }
+    } else {
+        printf("NO\n");
+    }
 }
