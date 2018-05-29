@@ -47,7 +47,7 @@ int main(){
 	int n, **chess_board;
 	scanf("%d", &n);
 	
-	chess_board = (int **) calloc(n, sizeof(int **));
+    chess_board = (int **) calloc(n, sizeof(int **));
     for (int i=0; i<n; i++) {
         chess_board[i] = (int *) calloc(n, sizeof(int *));
     }
